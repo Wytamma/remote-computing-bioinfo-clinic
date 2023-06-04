@@ -132,9 +132,9 @@ More details in this blog -> https://blog.wytamma.com/blog/hcp-vscode
 
 ## Rstudio server 
 
-You can use singularity to install RStudio server on a remote server, thus allowing interactive analysis with large compute resources.
+RStudio Server enables you to run the RStudio IDE on a Linux server, accessed from your web browser. You can use `singularity` to install RStudio server on a powerful remote server, thus allowing interactive analysis with large compute resources.
 
-Container platforms (docker, singularity, etc.) allow you to create and run containers that package up pieces of software in a way that is portable and reproducible. 
+Container platforms ([docker](https://www.docker.com/), [singularity](https://docs.sylabs.io/guides/latest/user-guide/), etc.) allow you to create and run containers that package up pieces of software in a way that is portable and reproducible.
 
 Why use containers?
 
@@ -144,13 +144,15 @@ Why use containers?
 4. Simplified software dependencies and management
 5. Consistent testing environment
 
-Singularity is the preferred container platform for HPC clusters as each container is only a single file, users don’t need root access to run the containers, and containers can be managed by users.
+Singularity is the preferred container platform for HPC clusters as each container is only a single file, users don’t need root access to run the containers, and containers can be managed by users. Here we will use a container to easily install RStudio without sudo. 
+
+Start by `ssh`ing to the remote server (hint use [VScode remote extension](https://github.com/Wytamma/remote-computing-bioinfo-clinic#vscode-for-remote-computing)) and create a `containers` directory.
 
 ```bash
 mkdir $HOME/containers
 ```
 
-Download the latest docker tidyverse container and save it in singularity image format (sif) at `$HOME/containers/rstudio/tidyverse_latest.sif`:
+Download the latest tidyverse container and save it in singularity image format (sif) at `$HOME/containers/rstudio/tidyverse_latest.sif`:
 
 ```bash
 singularity pull $HOME/containers/rstudio/tidyverse_latest.sif docker://rocker/tidyverse:latest
