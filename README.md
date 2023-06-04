@@ -18,7 +18,7 @@ VScode is a fully featured integrated development environment (IDE) produced by 
 
 > The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network - https://en.wikipedia.org/wiki/Secure_Shell
 
-The `ssh` is used to securely log into a remote server.
+The `ssh` commamd is used to securely log into a remote server.
 
 ```bash
 ssh [options] [user@]hostname [command]
@@ -32,7 +32,7 @@ ssh wwirth@marvin.mdu.unimelb.edu.au
 
 ### Private Keys (Passwordless SSH)
 
-Transmitting your password through the internet to connect to a remote server is dangerous. Instead you should use SSH public keys as the authentication method see [rderik's](https://rderik.com/blog/understanding-ssh-keys-and-using-keychain-to-manage-passphrase-on-macos/#the-problem-with-passwords) blog for more details.
+Transmitting your password through the internet to connect to a remote server is dangerous. Instead you should use SSH public keys as the authentication method (see [rderik's](https://rderik.com/blog/understanding-ssh-keys-and-using-keychain-to-manage-passphrase-on-macos/#the-problem-with-passwords) blog for more details).
 
 A private key is part of a key pair used in asymmetric encryption, along with a public key. This key pair is used for securing the connection between a client and a server. The private key, as the name suggests, is meant to be kept private and secure, known only to the owner. The public key, on the other hand, is shared freely and is used by others to encrypt messages that only the private key can decrypt.
 
