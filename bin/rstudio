@@ -1,0 +1,19 @@
+#! /bin/sh
+export PASSWORD=$(openssl rand -base64 15)
+PORT=$(python3 -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
+
+echo """
+--- `date` ---
+
+Starting RStudio Server!
+
+1. Point your web browser to http://localhost:${PORT}
+2. log in to RStudio Server using the following credentials:
+   user: ${USER}
+   password: ${PASSWORD}
+"""
+
+singularity exec \
+   --bind /etc/bashrc:/etc/bashrc,$HOME/containers/rstudio/run:/run,$HOME/containers/rstudio/var-lib-rstudio-server:/var/lib/rstudio-server,$HOME/containers/rstudio/database.conf:/etc/rstudio/database.conf \
+   $HOME/containers/rstudio/tidyverse_latest.sif \
+   /usr/lib/rstudio-server/bin/rserver --server-user $USER --www-port ${PORT} --www-address=127.0.0.1 --auth-none=0 --auth-pam-helper-path=pam-helper
