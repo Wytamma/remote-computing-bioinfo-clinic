@@ -2,6 +2,13 @@
 
 Remote computing is the ability to access and use a computer or a network from a non-local location. Analysis of large biological data requires substantial computing power, often more than what personal computers are capable of providing. The modern developer experience is one that seamlessly transition from local to remote compute.
 
+Some tools for remote computing:
+- [Google Colab](https://colab.research.google.com/)
+- [GitHub CodeSpaces](https://github.com/features/codespaces)
+- [Mosh](https://mosh.org/)
+- [Tmux](https://github.com/tmux/tmux)
+- [VScode](https://code.visualstudio.com/)
+
 ## VScode
 
 VScode is a fully featured integrated development environment (IDE) produced by Microsoft. VScode is open source and quickly become the default IDE. [Download VScode](https://code.visualstudio.com/Download) and start to get a feel for how it works on your local machine. There are some very good [docs](https://code.visualstudio.com/docs/getstarted/introvideos) on how to get started.
