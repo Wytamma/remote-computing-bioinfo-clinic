@@ -4,6 +4,7 @@ Remote computing is the ability to access and use a computer or a network from a
 
 Some tools for remote computing:
 - [Google Colab](https://colab.research.google.com/)
+- [Posit Cloud](https://login.rstudio.cloud/login) 
 - [GitHub CodeSpaces](https://github.com/features/codespaces)
 - [Mosh](https://mosh.org/)
 - [Tmux](https://github.com/tmux/tmux)
