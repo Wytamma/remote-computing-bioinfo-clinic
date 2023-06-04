@@ -128,7 +128,7 @@ You can use VScode to access remote servers with the [Remote - SSH](https://mark
 
 ![](images/vscode.png)
 
-More details in this blog -> https://blog.wytamma.com/blog/hcp-vscode
+More details in this [blog](https://blog.wytamma.com/blog/hcp-vscode).
 
 ## Rstudio server 
 
