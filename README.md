@@ -153,7 +153,7 @@ Singularity is the preferred container platform for HPC clusters as each contain
 Start by `ssh`ing to the remote server (hint use [VScode remote extension](https://github.com/Wytamma/remote-computing-bioinfo-clinic#vscode-for-remote-computing)) and create a `containers` directory.
 
 ```bash
-mkdir $HOME/containers
+mkdir -p $HOME/containers/rstudio
 ```
 
 Download the latest tidyverse container and save it in singularity image format (sif) at `$HOME/containers/rstudio/tidyverse_latest.sif`:
