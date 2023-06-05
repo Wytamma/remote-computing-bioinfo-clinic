@@ -12,6 +12,8 @@ Some tools for remote computing:
 - [Tmux](https://github.com/tmux/tmux)
 - [VScode](https://code.visualstudio.com/)
 
+Code for this tutorial can be found [here](https://github.com/Wytamma/remote-computing-bioinfo-clinic).
+
 ## VScode
 
 VScode is a fully featured integrated development environment (IDE) produced by Microsoft. VScode is open source and quickly become the default IDE. [Download VScode](https://code.visualstudio.com/Download) and start to get a feel for how it works on your local machine. There are some very good [docs](https://code.visualstudio.com/docs/getstarted/introvideos) on how to get started.
