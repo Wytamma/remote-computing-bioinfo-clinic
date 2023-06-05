@@ -1,3 +1,5 @@
+![](images/header.jpeg)
+
 # Remote computing like a Pro: SSH config, VScode and RStudio Server
 
 Remote computing is the ability to access and use a computer or a network from a non-local location. Analysis of large biological data can require extensive computation time and substantial computing power, often more than what personal computers are capable of providing. The modern developer environment is one that can seamlessly transition from local to remote compute. This enables researchers to access powerful computational resources on remote servers whenever they are required.
