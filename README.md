@@ -98,11 +98,19 @@ The SSH server uses these keys in a challenge-response protocol to verify the au
 2. The client uses the private key to decrypt the challenge and send it back.
 3. If the decrypted challenge matches what the server expects, the client is authenticated and granted access.
 
-Add your **public** SSH key to the server to allow private-public key authentication. This command sends the public key to the server where it is append to the `.ssh/authorized_keys` files. The next time you `ssh` into the server this key will be used for authentication.
+Add your **public** SSH key to the server to allow private-public key authentication. This command sends the public key to the server where it is append to the `.ssh/authorized_keys` files. The next time you `ssh` into the server this key will be used for authentication. Use the `ssh-copy-id` command to copy your public key to the server:
+
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub wwirth@marvin.mdu.unimelb.edu.au
+```
+
+If `ssh-copy-id` is unavailable you can manually copy the keys with this command:   
 
 ```bash
 cat ~/.ssh/id_rsa.pub | ssh wwirth@marvin.mdu.unimelb.edu.au 'cat >> .ssh/authorized_keys'
 ```
+
+Note: you may need to set the permission of `.ssh` and `.ssh/authorized_keys` e.g. `chmod 700 .ssh && chmod 600 .ssh/authorized_keys`. 
 
 For more information see the offical university [guide](https://dashboard.hpc.unimelb.edu.au/ssh/).
 
